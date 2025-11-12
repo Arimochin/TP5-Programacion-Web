@@ -1,0 +1,14 @@
+package views
+
+templ Layout(body templ.Component, title string){
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+        </head>
+        <body>
+            <h1> {title} </h1>
+            @body
+        </body>
+    </html>
+}

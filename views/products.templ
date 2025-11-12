@@ -1,0 +1,21 @@
+package views
+import db "tp5ej1/db/sqlc"
+
+templ ProductList(products []db.Product) {
+    <table>
+        <thead> <tr> <th>Name</th> <th>Price</th> </tr> </thead>
+        <tbody>
+            if len(products) > 0 {
+                for _, product := range products {
+                    <tr>
+                        <td>{product.Name}</td> <td>{product.Price}</td>
+                    </tr>
+                }
+            } else {
+                <tr>
+                    <td colspan="3">No products found.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

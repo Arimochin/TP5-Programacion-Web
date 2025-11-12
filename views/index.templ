@@ -1,0 +1,6 @@
+package views
+import db "tp5ej1/db/sqlc"
+
+templ IndexPage(title string, products []db.Product) {
+    @Layout(ProductList(products), title)
+}
